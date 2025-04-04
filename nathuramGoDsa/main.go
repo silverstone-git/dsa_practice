@@ -5,7 +5,7 @@ import (
   // "nathuramGoDsa/isValidParentheses"
   // "nathuramGoDsa/stack"
   // "nathuramGoDsa/queue"
-  "nathuramGoDsa/dll"
+  "nathuramGoDsa/hashMap"
 )
 
 
@@ -52,40 +52,44 @@ func main() {
   // fmt.Println(q.Dequeue());
 
 
-  l := lruCache.MakeLru(5);
+  // l := hashMap.MakeLru(5);
 
   // fmt.Println(l.Get(99)); // should give -1
   // l.Display()
 
 
-  l.Set("delhi", "india")
-  l.Display()
-  fmt.Println("geto of delhi: ")
-  fmt.Println(l.Get("delhi")); // should give india
+  // l.Set("delhi", "india")
+  // l.Display()
+  // fmt.Println("geto of delhi: ")
+  // fmt.Println(l.Get("delhi")); // should give india
   
-  l.Set("washington", "usa")
-  l.Set("london", "uk")
-  l.Set("beijing", "china")
+  // l.Set("washington", "usa")
+  // l.Set("london", "uk")
+  // l.Set("beijing", "china")
   // fmt.Println("after setting")
   // l.Display()
 
-  fmt.Println("\nupdating..")
-  l.Set("beijing", "prc")
-  l.Display()
+  // fmt.Println("\nupdating..")
+  // l.Set("beijing", "prc")
+  // l.Display()
 
-  fmt.Println("\nupdating..")
-  l.Set("london", "england")
-  l.Display()
+  // fmt.Println("\nupdating..")
+  // l.Set("london", "england")
+  // l.Display()
 
 
-  fmt.Println("\nget of beijing: ")
-  fmt.Println(l.Get("beijing")); // should give prc
+  // fmt.Println("\nget of beijing: ")
+  // fmt.Println(l.Get("beijing")); // should give prc
+  //
+  // fmt.Println("\noverflowing..")
+  // l.Set("madrid", "spain")
+  // l.Set("paris", "france")
+  // l.Display()
 
-  fmt.Println("\noverflowing..")
-  l.Set("madrid", "spain")
-  l.Set("paris", "france")
-  l.Display()
+  // fmt.Println("\nget of delhi after overflow:")
+  // fmt.Println(l.Get("delhi")) // should give -1
 
-  fmt.Println("\nget of delhi after overflow:")
-  fmt.Println(l.Get("delhi")) // should give -1
+  var strs = []string{"hey", "fighthey", "heyfight", "hye", "jude", "duje", "tea", "eaton", "notea", "eat"}
+  res := hashMap.Group(strs);
+  fmt.Println(res)
 }
